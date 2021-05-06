@@ -1,0 +1,39 @@
+{% extends "todo_app/base.html" %}
+
+{% block title %}
+  Login PAGE
+{% endblock title %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-3"><center>TO-DO LIST</center></h1>
+      <p class="lead"><center>LOGIN and START</center></p>
+      
+      <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="name">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="password">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-success">Login</button>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+  
+{% endblock content %}
